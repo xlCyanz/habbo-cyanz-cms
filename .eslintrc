@@ -1,4 +1,8 @@
 {
+  "env": {
+    "browser": true,
+    "node": true
+  },
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
@@ -29,16 +33,9 @@
         "caughtErrorsIgnorePattern": "^_"
       }
     ],
-
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-
-    "prettier/prettier": [
-      "warn",
-      {
-        "endOfLine": "auto",
-        "singleQuote": true
-      }
-    ]
+    "prettier/prettier": "error",
+    "quotes": ["error", "double"]
   }
 }

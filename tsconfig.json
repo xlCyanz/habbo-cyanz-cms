@@ -23,7 +23,16 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": ["src/*"]
+      "~/*": ["src/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@utils/*": ["src/utils/*"],
+      "@atoms/*": ["src/ui/atoms/*"],
+      "@pages/*": ["src/ui/pages/*"],
+      "@contexts/*": ["src/contexts/*"],
+      "@interfaces/*": ["src/interfaces/*"],
+      "@molecules/*": ["src/ui/molecules/*"],
+      "@organisms/*": ["src/ui/organisms/*"],
+      "@templates/*": ["src/ui/templates/*"]
     }
   },
   "include": ["vite.config.ts", "**/*.ts", "**/*.tsx"],
