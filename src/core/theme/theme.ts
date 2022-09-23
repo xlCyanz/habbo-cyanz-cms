@@ -14,9 +14,10 @@ const theme = makeTheme({
   },
   colors: {
     text: palette.white,
-    background: palette.outerSpace,
+    background: palette.eerieBlack,
     primary: palette.vividGamboge,
-    secondary: palette.independence,
+    secondary: palette.raisinBlack,
+    secondaryLight: palette.onyx,
     accent: "",
     highlight: "",
     muted: "",
@@ -76,7 +77,7 @@ const theme = makeTheme({
     secondary: {
       backgroundColor: "secondary",
       "&:hover": {
-        backgroundColor: "",
+        backgroundColor: "secondaryLight",
       },
     },
   },
