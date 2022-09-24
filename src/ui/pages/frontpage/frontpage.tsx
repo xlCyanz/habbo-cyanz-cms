@@ -1,7 +1,11 @@
-import { Button } from "@atoms";
-import { Container } from "theme-ui";
+import { Box, Container } from "theme-ui";
+
+import { Button, Input } from "@atoms";
+import { useState } from "react";
 
 const FrontPage = () => {
+  const [name, setName] = useState("");
+
   return (
     <Container p={4} bg="muted">
       Hola
@@ -25,6 +29,12 @@ const FrontPage = () => {
         <Button variant="secondary" size="large">
           Secondary
         </Button>
+
+        <Input
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="Nombre"
+        />
       </div>
     </Container>
   );
