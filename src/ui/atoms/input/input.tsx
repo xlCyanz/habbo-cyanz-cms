@@ -16,10 +16,7 @@ const styles: { [key: string]: ThemeUIStyleObject } = {
     backgroundColor: "white",
     boxShadow: "none",
     alignItems: "center",
-  },
-  inputBoxBorderPrimary: {
-    borderWidth: 1,
-    borderColor: "primary",
+    borderWidth: 2,
     borderStyle: "solid",
   },
   input: {
@@ -27,7 +24,6 @@ const styles: { [key: string]: ThemeUIStyleObject } = {
     borderRadius: 0,
     outline: 0,
     fontFamily: "medium",
-    mx: 2,
   },
 };
 
@@ -38,11 +34,18 @@ const InputWrapper = ({ renderLeft, renderRight, ...props }: IInputProps) => {
     <Flex
       sx={{
         ...styles.inputBox,
-        ...(value && styles.inputBoxBorderPrimary),
+        borderColor: value ? "primary" : "transparent",
       }}
     >
       {renderLeft}
-      <Input sx={styles.input} {...props} />
+      <Input
+        sx={{
+          ...styles.input,
+          ...(renderLeft && { ml: 1 }),
+          ...(renderRight && { mr: 1 }),
+        }}
+        {...props}
+      />
       {renderRight}
     </Flex>
   );
