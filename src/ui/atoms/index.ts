@@ -15,3 +15,6 @@ export type { ICheckboxProps } from "./checkbox";
 
 export { default as Text } from "./text";
 export type { ITextProps } from "./text";
+
+export { default as Box } from "./box";
+export type { IBoxProps } from "./box";
