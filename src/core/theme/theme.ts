@@ -17,6 +17,7 @@ const theme = makeTheme({
     inputText: palette.eerieBlack,
     background: palette.eerieBlack,
     primary: palette.vividGamboge,
+    primaryLight: palette.chineseYellow,
     secondary: palette.raisinBlack,
     secondaryLight: palette.onyx,
     accent: "",
@@ -88,9 +89,9 @@ const theme = makeTheme({
   },
   buttons: {
     primary: {
-      backgroundColor: "orange",
+      backgroundColor: "primary",
       "&:hover": {
-        backgroundColor: "#f90",
+        backgroundColor: "primaryLight",
       },
     },
     secondary: {
