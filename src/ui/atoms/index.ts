@@ -18,3 +18,9 @@ export type { ITextProps } from "./text";
 
 export { default as Box } from "./box";
 export type { IBoxProps } from "./box";
+
+export { default as Image } from "./image";
+export type { IImageProps } from "./image";
+
+export { default as Avatar } from "./avatar";
+export type { IAvatarProps } from "./avatar";

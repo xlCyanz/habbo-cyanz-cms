@@ -2,7 +2,10 @@ import { useState } from "react";
 import { Container } from "theme-ui";
 
 import { TextIcon } from "@molecules";
-import { Button, Checkbox, Icon, Input } from "@atoms";
+import { Avatar, Button, Checkbox, Icon, Input } from "@atoms";
+
+const avatar =
+  "https://static.vecteezy.com/system/resources/previews/002/275/847/non_2x/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg";
 
 const FrontPage = () => {
   const [name, setName] = useState("");
@@ -35,6 +38,9 @@ const FrontPage = () => {
       <Icon name="user" size={20} />
       <Checkbox label="Hola" defaultChecked={true} />
       <TextIcon text="Hola" icon="question-line" />
+      <Avatar src={avatar} size="small" />
+      <Avatar src={avatar} size="medium" mx={2} />
+      <Avatar src={avatar} size="large" />
     </Container>
   );
 };

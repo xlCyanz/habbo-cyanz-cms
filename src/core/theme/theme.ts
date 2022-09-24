@@ -87,6 +87,11 @@ const theme = makeTheme({
       fontSize: 3,
     },
   },
+  images: {
+    avatarBorder: {
+      borderRadius: 99999,
+    },
+  },
   buttons: {
     primary: {
       backgroundColor: "primary",
