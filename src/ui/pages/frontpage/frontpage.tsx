@@ -1,7 +1,7 @@
-import { Box, Container } from "theme-ui";
-
-import { Button, Input } from "@atoms";
 import { useState } from "react";
+import { Container } from "theme-ui";
+
+import { Button, Checkbox, Icon, Input } from "@atoms";
 
 const FrontPage = () => {
   const [name, setName] = useState("");
@@ -35,6 +35,16 @@ const FrontPage = () => {
           onChange={(e) => setName(e.target.value)}
           placeholder="Nombre"
         />
+
+        <Icon name="arrow-right" size={20} />
+        <Icon name="discord" size={20} />
+        <Icon name="instagram" size={20} />
+        <Icon name="lock" size={20} />
+        <Icon name="question-line" size={20} />
+        <Icon name="twitter" size={20} />
+        <Icon name="user" size={20} />
+
+        <Checkbox label="Hola" defaultChecked={true} />
       </div>
     </Container>
   );

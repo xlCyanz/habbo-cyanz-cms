@@ -80,6 +80,12 @@ const theme = makeTheme({
       fontWeight: "body",
     },
   },
+  text: {
+    default: {
+      color: "text",
+      fontSize: 3,
+    },
+  },
   buttons: {
     primary: {
       backgroundColor: "orange",
