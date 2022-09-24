@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Container } from "theme-ui";
 
 import { TextIcon } from "@molecules";
-import { Avatar, Button, Checkbox, Icon, Input } from "@atoms";
+import { Avatar, Button, Card, Checkbox, Icon, Input } from "@atoms";
 
 const avatar =
   "https://static.vecteezy.com/system/resources/previews/002/275/847/non_2x/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg";
@@ -41,6 +41,9 @@ const FrontPage = () => {
       <Avatar src={avatar} size="small" />
       <Avatar src={avatar} size="medium" mx={2} />
       <Avatar src={avatar} size="large" />
+      <Card>
+        <Avatar src={avatar} size="small" />
+      </Card>
     </Container>
   );
 };

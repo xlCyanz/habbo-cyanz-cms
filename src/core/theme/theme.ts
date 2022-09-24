@@ -92,6 +92,14 @@ const theme = makeTheme({
       borderRadius: 99999,
     },
   },
+  cards: {
+    primary: {
+      p: 2,
+      borderRadius: 4,
+      boxShadow: "0 0 8px rgba(0, 0, 0, .3)",
+      backgroundColor: "secondary",
+    },
+  },
   buttons: {
     primary: {
       backgroundColor: "primary",
