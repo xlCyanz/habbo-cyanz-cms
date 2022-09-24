@@ -20,7 +20,7 @@ const styleSize: { [key: string]: ThemeUIStyleObject } = {
 const styleDefault: ThemeUIStyleObject = {
   width: "100%",
   fontFamily: "semiBold",
-  borderRadius: 2,
+  borderRadius: 3,
   cursor: "pointer",
 };
 
