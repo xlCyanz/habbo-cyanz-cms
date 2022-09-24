@@ -5,7 +5,7 @@ export interface IButtonProps extends ButtonProps {
   size?: SizeVariant;
 }
 
-const styleSize: { [key: string]: ThemeUIStyleObject } = {
+const styleSize: { [key in SizeVariant]: ThemeUIStyleObject } = {
   small: {
     py: 1,
   },
