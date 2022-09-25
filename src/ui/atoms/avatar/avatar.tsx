@@ -1,10 +1,8 @@
-import { ThemeUIStyleObject } from "theme-ui";
+import { Avatar, AvatarProps, ThemeUIStyleObject } from "theme-ui";
 
 import { SizeVariant } from "@types";
 
-import Image, { IImageProps } from "../image";
-
-export interface IAvatarProps extends IImageProps {
+export interface IAvatarProps extends AvatarProps {
   src: string;
   size?: SizeVariant;
 }
@@ -24,10 +22,10 @@ const styleSize: { [key in SizeVariant]: ThemeUIStyleObject } = {
   },
 };
 
-const Avatar = ({ size = "medium", ...props }: IAvatarProps) => {
+const AvatarWrapper = ({ size = "medium", ...props }: IAvatarProps) => {
   return (
-    <Image variant="avatarBorder" sx={{ ...styleSize[size] }} {...props} />
+    <Avatar variant="avatarBorder" sx={{ ...styleSize[size] }} {...props} />
   );
 };
 
-export default Avatar;
+export default AvatarWrapper;
