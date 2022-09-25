@@ -1,11 +1,13 @@
+import { Button, ButtonProps } from "theme-ui";
+
 import { SizeVariant } from "@types";
-import { Button, ButtonProps, ThemeUIStyleObject } from "theme-ui";
+import { StylesUtils } from "@utils";
 
 export interface IButtonProps extends ButtonProps {
   size?: SizeVariant;
 }
 
-const styleSize: { [key in SizeVariant]: ThemeUIStyleObject } = {
+const styleSize = StylesUtils.create<SizeVariant>({
   small: {
     py: 1,
   },
@@ -15,17 +17,19 @@ const styleSize: { [key in SizeVariant]: ThemeUIStyleObject } = {
   large: {
     py: 3,
   },
-};
+});
 
-const styleDefault: ThemeUIStyleObject = {
-  width: "100%",
-  fontFamily: "semiBold",
-  borderRadius: 3,
-  cursor: "pointer",
-};
+const styles = StylesUtils.create({
+  default: {
+    width: "100%",
+    fontFamily: "semiBold",
+    borderRadius: 3,
+    cursor: "pointer",
+  },
+});
 
 const ButtonWrapper = ({ size = "medium", ...props }: IButtonProps) => {
-  return <Button sx={{ ...styleDefault, ...styleSize[size] }} {...props} />;
+  return <Button sx={{ ...styles.default, ...styleSize[size] }} {...props} />;
 };
 
 export default ButtonWrapper;

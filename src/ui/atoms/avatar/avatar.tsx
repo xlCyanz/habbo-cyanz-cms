@@ -1,13 +1,14 @@
-import { Avatar, AvatarProps, ThemeUIStyleObject } from "theme-ui";
+import { Avatar, AvatarProps } from "theme-ui";
 
 import { SizeVariant } from "@types";
+import { StylesUtils } from "@utils";
 
 export interface IAvatarProps extends AvatarProps {
   src: string;
   size?: SizeVariant;
 }
 
-const styleSize: { [key in SizeVariant]: ThemeUIStyleObject } = {
+const styleSize = StylesUtils.create<SizeVariant>({
   small: {
     width: 48,
     height: 48,
@@ -20,7 +21,7 @@ const styleSize: { [key in SizeVariant]: ThemeUIStyleObject } = {
     width: 96,
     height: 96,
   },
-};
+});
 
 const AvatarWrapper = ({ size = "medium", ...props }: IAvatarProps) => {
   return (

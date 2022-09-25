@@ -25,7 +25,7 @@
     "paths": {
       "@core": ["./src/core"],
       "@hooks": ["src/hooks/*"],
-      "@utils": ["src/utils/*"],
+      "@utils": ["src/utils"],
       "@atoms": ["src/ui/atoms"],
       "@pages": ["src/ui/pages"],
       "@types": ["src/types"],
