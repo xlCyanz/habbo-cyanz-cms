@@ -38,6 +38,7 @@ const FrontPage = () => {
       <Icon name="user" size={20} />
       <Checkbox label="Hola" defaultChecked={true} />
       <TextIcon text="Hola" icon="question-line" />
+      <TextIcon text="Hola" icon="question-line" reverted />
       <Avatar src={avatar} size="small" />
       <Avatar src={avatar} size="medium" mx={2} />
       <Avatar src={avatar} size="large" />
