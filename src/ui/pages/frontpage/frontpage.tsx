@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { Container } from "theme-ui";
 
 import { TextIcon } from "@molecules";
-import { Avatar, Button, Card, Checkbox, Icon, Input } from "@atoms";
+import { Avatar, Button, Card, Checkbox, Icon, Input, Container } from "@atoms";
 
 const avatar =
   "https://static.vecteezy.com/system/resources/previews/002/275/847/non_2x/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg";
@@ -11,7 +10,7 @@ const FrontPage = () => {
   const [name, setName] = useState("");
 
   return (
-    <Container p={4} bg="muted">
+    <Container>
       Hola
       <Button>Primary</Button>
       <Button variant="secondary">Secondary</Button>

@@ -117,6 +117,11 @@ const theme = makeTheme({
       },
     },
   },
+  layout: {
+    container: {
+      px: [3, 5, 9],
+    },
+  },
 });
 
 export default theme;
