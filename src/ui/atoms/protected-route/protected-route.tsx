@@ -13,11 +13,7 @@ const ProtectedRoute = ({
 }: IProtectedRouteProps) => {
   if (!isAllowed) return <Navigate to={redirectPath} replace />;
 
-  return (
-    <>
-      <Outlet />
-    </>
-  );
+  return <Outlet />;
 };
 
 export default ProtectedRoute;
