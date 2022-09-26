@@ -95,13 +95,14 @@ const theme = makeTheme({
   cards: {
     primary: {
       p: 2,
-      borderRadius: 4,
+      borderRadius: 3,
     },
     secondary: {
+      borderRadius: 3,
       boxShadow: "0 0 8px rgba(0, 0, 0, .3)",
       backgroundColor: "secondary",
       "&:hover": {
-        backgroundColor: "secondaryLight",
+        backgroundColor: "primary",
       },
     },
   },

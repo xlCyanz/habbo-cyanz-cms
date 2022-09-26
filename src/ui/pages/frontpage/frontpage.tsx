@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { TextIcon } from "@molecules";
+import { LastRegisterCard, TextIcon } from "@molecules";
 import {
   Avatar,
   Button,
@@ -16,6 +16,9 @@ import {
 
 const avatar =
   "https://static.vecteezy.com/system/resources/previews/002/275/847/non_2x/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg";
+
+const avatarHabbo =
+  "https://imager.rubyhotel.city/?&figure=sh-5823-90.ch-3059-110.fa-5065-72.lg-710-90.wa-3263-64-91.ha-1013-90.hr-828-49.hd-180-1379.ea-3226-110&direction=2&head_direction=2&size=m&headonly=1";
 
 const FrontPage = () => {
   const [name, setName] = useState("");
@@ -44,6 +47,7 @@ const FrontPage = () => {
           <Text>Hola</Text>
         </Tooltip>
       </Box>
+      <LastRegisterCard avatar={avatarHabbo} username="xlCyanz" />
       <Icon name="arrow-right" size={20} />
       <Icon name="discord" size={20} />
       <Icon name="instagram" size={20} />
