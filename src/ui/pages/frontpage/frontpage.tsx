@@ -40,7 +40,7 @@ const FrontPage = () => {
         placeholder="Nombre"
       />
       <Box my={5}>
-        <Tooltip content={<>Text</>} direction="top">
+        <Tooltip content={<Text>Lorem Ipsum</Text>} direction="top">
           <Text>Hola</Text>
         </Tooltip>
       </Box>

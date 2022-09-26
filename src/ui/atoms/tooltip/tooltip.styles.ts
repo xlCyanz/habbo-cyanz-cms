@@ -12,13 +12,15 @@ export const styles = StylesUtils.create({
     position: "relative",
   },
   tooltip: {
-    p: 2,
+    px: 3,
+    py: 2,
     position: "absolute",
-    borderRadius: 3,
+    borderRadius: 2,
+    fontFamily: "medium",
     left: "50%",
     transform: "translateX(-50%)",
-    background: "primary",
-    fontSize: "14px",
+    backgroundColor: "secondaryLight",
+    fontSize: "13px",
     lineHeight: 1,
     zIndex: 100,
     whiteSpace: "nowrap",
@@ -41,7 +43,7 @@ export const stylesAlign = StylesUtils.create<AlignVariants>({
     top: `calc(${TOOLTIP_H_MARGIN} * -1)`,
     ":before": {
       top: "100%",
-      borderTopColor: "primary",
+      borderTopColor: "secondaryLight",
     },
   },
   right: {
@@ -50,14 +52,14 @@ export const stylesAlign = StylesUtils.create<AlignVariants>({
     transform: "translateX(0) translateY(-50%)",
     ":before": {
       left: `calc(${TOOLTIP_ARROW_SIZE} * -1)`,
-      borderRightColor: "primary",
+      borderRightColor: "secondaryLight",
     },
   },
   bottom: {
     bottom: `calc(${TOOLTIP_H_MARGIN} * -1)`,
     ":before": {
       bottom: "100%",
-      borderBottomColor: "primary",
+      borderBottomColor: "secondaryLight",
     },
   },
   left: {
@@ -67,7 +69,7 @@ export const stylesAlign = StylesUtils.create<AlignVariants>({
     transform: "translateX(0) translateY(-50%)",
     ":before": {
       right: `calc(${TOOLTIP_ARROW_SIZE} * -2)`,
-      borderLeftColor: "primary",
+      borderLeftColor: "secondaryLight",
     },
   },
 });
