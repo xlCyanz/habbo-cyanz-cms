@@ -30,3 +30,6 @@ export type { ICardProps } from "./card";
 
 export { default as Container } from "./container";
 export type { IContainerProps } from "./container";
+
+export { default as Tooltip } from "./tooltip";
+export type { ITooltipProps } from "./tooltip";

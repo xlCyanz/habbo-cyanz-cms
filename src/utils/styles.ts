@@ -4,10 +4,14 @@ type CreateStyle<S extends string | number | symbol> = {
   [key in S]: ThemeUIStyleObject;
 };
 
-const createStyle = <T extends string | number | symbol>(
-  obj: CreateStyle<T>,
+const createStyle = <S extends string | number | symbol>(
+  obj: CreateStyle<S>,
 ) => {
   return obj;
 };
 
-export { createStyle as create };
+const composeStyle = <T>(style1: T, style2?: T) => {
+  return Object.assign({}, style1, style2) as T;
+};
+
+export { createStyle as create, composeStyle as compose };
