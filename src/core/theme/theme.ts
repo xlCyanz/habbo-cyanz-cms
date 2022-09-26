@@ -86,6 +86,9 @@ const theme = makeTheme({
       color: "text",
       fontSize: 3,
     },
+    footerText: {
+      fontSize: 13,
+    },
   },
   images: {
     avatarBorder: {
