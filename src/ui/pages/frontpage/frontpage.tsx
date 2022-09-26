@@ -1,7 +1,18 @@
 import { useState } from "react";
 
 import { TextIcon } from "@molecules";
-import { Avatar, Button, Card, Checkbox, Icon, Input, Container } from "@atoms";
+import {
+  Avatar,
+  Button,
+  Card,
+  Checkbox,
+  Icon,
+  Input,
+  Container,
+  Tooltip,
+  Text,
+  Box,
+} from "@atoms";
 
 const avatar =
   "https://static.vecteezy.com/system/resources/previews/002/275/847/non_2x/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg";
@@ -28,6 +39,11 @@ const FrontPage = () => {
         onChange={(e) => setName(e.target.value)}
         placeholder="Nombre"
       />
+      <Box my={5}>
+        <Tooltip content={<>Text</>} direction="top">
+          <Text>Hola</Text>
+        </Tooltip>
+      </Box>
       <Icon name="arrow-right" size={20} />
       <Icon name="discord" size={20} />
       <Icon name="instagram" size={20} />
