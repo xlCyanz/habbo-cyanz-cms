@@ -33,3 +33,9 @@ export type { IContainerProps } from "./container";
 
 export { default as Tooltip } from "./tooltip";
 export type { ITooltipProps } from "./tooltip";
+
+export { default as Flex } from "./flex";
+export type { IFlexProps } from "./flex";
+
+export { default as Divider } from "./divider";
+export type { IDividerProps } from "./divider";
