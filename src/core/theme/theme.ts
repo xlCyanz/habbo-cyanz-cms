@@ -89,7 +89,7 @@ const theme = makeTheme({
   },
   images: {
     avatarBorder: {
-      borderRadius: 99999,
+      borderRadius: 7,
     },
   },
   cards: {
