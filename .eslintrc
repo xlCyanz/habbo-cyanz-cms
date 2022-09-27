@@ -1,7 +1,8 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "node": true
   },
   "extends": [
     "eslint:recommended",
@@ -9,7 +10,6 @@
     "plugin:jsx-a11y/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:import/typescript",
-    "plugin:react/jsx-runtime",
     "plugin:prettier/recommended",
     "prettier"
   ],
@@ -37,8 +37,6 @@
     "import/no-unresolved": "off",
     "import/extensions": "off",
     "import/prefer-default-export": "off",
-    "camelcase": "off",
-    "@typescript-eslint/camelcase": "off",
     "no-restricted-exports": "off",
     "react/display-name": 0,
     "react/jsx-props-no-spreading": "off",

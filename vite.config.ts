@@ -1,6 +1,5 @@
 import react from "@vitejs/plugin-react";
 import tsconfigPaths from "vite-tsconfig-paths";
-import { VitePluginFonts } from "vite-plugin-fonts";
 
 import { defineConfig } from "vite";
 
@@ -10,6 +9,10 @@ export default defineConfig({
     esbuildOptions: {
       target: "es2020",
     },
+  },
+  esbuild: {
+    jsxFactory: "jsx",
+    jsxInject: `import { jsx } from 'theme-ui'`,
   },
   plugins: [react(), tsconfigPaths()],
 });
