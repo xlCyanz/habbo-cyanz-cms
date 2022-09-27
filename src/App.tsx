@@ -1,15 +1,15 @@
-import { ThemeProvider } from "theme-ui";
+import { RootNavigation } from "@core";
 
-import { RootNavigation, theme } from "@core";
+import { ThemeContextProvider } from "@contexts";
 
 import GlobalStyles from "./global-styles";
 
 const App = () => {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeContextProvider>
       <GlobalStyles />
       <RootNavigation />
-    </ThemeProvider>
+    </ThemeContextProvider>
   );
 };
 
