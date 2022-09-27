@@ -1,3 +1,4 @@
+import React from "react";
 import { Avatar, AvatarProps } from "theme-ui";
 
 import { SizeVariant } from "@types";
