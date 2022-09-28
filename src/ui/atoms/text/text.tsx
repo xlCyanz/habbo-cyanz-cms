@@ -1,3 +1,4 @@
+import React from "react";
 import { Text, TextProps } from "theme-ui";
 
 export type ITextProps = TextProps;

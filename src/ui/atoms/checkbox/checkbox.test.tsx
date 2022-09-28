@@ -4,23 +4,25 @@ import { beforeEach, describe, expect, test } from "vitest";
 
 import { ThemeContextProvider } from "@contexts";
 
-import Avatar from "./avatar";
+import Checkbox from "./checkbox";
 
-const avatar =
-  "https://static.vecteezy.com/system/resources/previews/002/275/847/non_2x/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg";
-
-describe("<Avatar/>", () => {
-  const testId = "avatar_Test";
+describe("<Checkbox/>", () => {
+  const testId = "checkbox_Test";
+  const label = "This is a label";
 
   beforeEach(() => {
     render(
       <ThemeContextProvider>
-        <Avatar data-testid={testId} src={avatar} size="small" />
+        <Checkbox data-testid={testId} label={label} defaultChecked={true} />
       </ThemeContextProvider>,
     );
   });
 
   test("Should render component", () => {
     expect(screen.getByTestId(testId)).toBeDefined();
+  });
+
+  test("Should render label in checkbox", () => {
+    expect(screen.getByText(label)).toBeDefined();
   });
 });

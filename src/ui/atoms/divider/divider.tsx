@@ -1,5 +1,7 @@
-import { StylesUtils } from "@utils";
+import React from "react";
 import { Divider, DividerProps } from "theme-ui";
+
+import { StylesUtils } from "@utils";
 
 export interface IDividerProps extends DividerProps {
   vertical?: boolean;

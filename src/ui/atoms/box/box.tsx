@@ -1,3 +1,4 @@
+import React from "react";
 import { Box, BoxProps } from "theme-ui";
 
 export type IBoxProps = BoxProps;

@@ -1,3 +1,4 @@
+import React from "react";
 import { Checkbox, CheckboxProps, Label } from "theme-ui";
 
 export interface ICheckboxProps extends CheckboxProps {

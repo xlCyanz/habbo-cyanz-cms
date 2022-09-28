@@ -1,3 +1,4 @@
+import React from "react";
 import { Flex, FlexProps } from "theme-ui";
 
 export type IFlexProps = FlexProps;

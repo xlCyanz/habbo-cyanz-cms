@@ -1,3 +1,4 @@
+import React from "react";
 import { Container, ContainerProps } from "theme-ui";
 
 export type IContainerProps = ContainerProps;

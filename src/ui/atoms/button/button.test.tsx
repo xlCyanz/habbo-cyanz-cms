@@ -4,23 +4,25 @@ import { beforeEach, describe, expect, test } from "vitest";
 
 import { ThemeContextProvider } from "@contexts";
 
-import Avatar from "./avatar";
+import Button from "./button";
 
-const avatar =
-  "https://static.vecteezy.com/system/resources/previews/002/275/847/non_2x/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg";
-
-describe("<Avatar/>", () => {
-  const testId = "avatar_Test";
+describe("<Button/>", () => {
+  const testId = "button_Test";
+  const buttonText = "Primary Button";
 
   beforeEach(() => {
     render(
       <ThemeContextProvider>
-        <Avatar data-testid={testId} src={avatar} size="small" />
+        <Button data-testid={testId}>{buttonText}</Button>
       </ThemeContextProvider>,
     );
   });
 
   test("Should render component", () => {
     expect(screen.getByTestId(testId)).toBeDefined();
+  });
+
+  test("Should render text in button", () => {
+    expect(screen.getByText(buttonText)).toBeDefined();
   });
 });
