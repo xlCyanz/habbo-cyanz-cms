@@ -19,7 +19,7 @@ describe("<Container/>", () => {
   });
 
   test("Should render component", () => {
-    expect(screen.getByTestId(testId)).toBeDefined();
+    expect(screen.getByTestId(testId)).toBeInTheDocument();
   });
 
   test("Should render text in container", () => {

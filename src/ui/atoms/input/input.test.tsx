@@ -25,7 +25,7 @@ describe("<Input/>", () => {
   });
 
   test("Should render component", () => {
-    expect(screen.getByTestId(testId)).toBeDefined();
+    expect(screen.getByTestId(testId)).toBeInTheDocument();
   });
 
   test("Should have value and placeholder", async () => {

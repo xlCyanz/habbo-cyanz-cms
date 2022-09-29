@@ -5,28 +5,27 @@ import { beforeEach, describe, expect, test } from "vitest";
 import { ThemeContextProvider } from "@contexts";
 
 import Image from "./image";
+import { FakeUtils } from "@utils";
 
 describe("<Image/>", () => {
   const testId = "image_Test";
-  const imageSource =
-    "https://static.vecteezy.com/system/resources/previews/002/275/847/non_2x/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg";
-  const imageAlt = "maleAvatar";
+  const { source, alt } = FakeUtils.imageTest();
 
   beforeEach(() => {
     render(
       <ThemeContextProvider>
-        <Image data-testid={testId} src={imageSource} alt={imageAlt} />
+        <Image data-testid={testId} src={source} alt={alt} />
       </ThemeContextProvider>,
     );
   });
 
   test("Should render component", () => {
-    expect(screen.getByTestId(testId)).toBeDefined();
+    expect(screen.getByTestId(testId)).toBeInTheDocument();
   });
 
   test("Should have source and alt", async () => {
-    const image = (await screen.findByTestId(testId)) as HTMLImageElement;
-    expect(image.src).toContain(imageSource);
-    expect(image.alt).toContain(imageAlt);
+    const image = await screen.findByTestId<HTMLImageElement>(testId);
+    expect(image.src).toContain(source);
+    expect(image.alt).toContain(alt);
   });
 });

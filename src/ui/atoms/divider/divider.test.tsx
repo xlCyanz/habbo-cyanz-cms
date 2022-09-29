@@ -20,10 +20,10 @@ describe("<Divider/>", () => {
   });
 
   test("Should render component (horizontal)", () => {
-    expect(screen.getByTestId(testHorizontalId)).toBeDefined();
+    expect(screen.getByTestId(testHorizontalId)).toBeInTheDocument();
   });
 
   test("Should render component (vertical)", () => {
-    expect(screen.getByTestId(testVerticalId)).toBeDefined();
+    expect(screen.getByTestId(testVerticalId)).toBeInTheDocument();
   });
 });
