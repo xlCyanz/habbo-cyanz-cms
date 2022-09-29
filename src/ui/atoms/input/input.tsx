@@ -1,6 +1,7 @@
-import { StylesUtils } from "@utils";
-import { ReactElement } from "react";
+import React, { ReactElement } from "react";
 import { Flex, Input, InputProps } from "theme-ui";
+
+import { styles } from "./input.styles";
 
 export interface IInputProps extends InputProps {
   value: string;
@@ -8,25 +9,6 @@ export interface IInputProps extends InputProps {
   renderLeft?: ReactElement;
   renderRight?: ReactElement;
 }
-
-const styles = StylesUtils.create({
-  inputBox: {
-    borderRadius: 3,
-    px: 2,
-    color: "inputText",
-    backgroundColor: "white",
-    boxShadow: "none",
-    alignItems: "center",
-    borderWidth: 2,
-    borderStyle: "solid",
-  },
-  input: {
-    border: "none",
-    borderRadius: 0,
-    outline: 0,
-    fontFamily: "medium",
-  },
-});
 
 const InputWrapper = ({ renderLeft, renderRight, ...props }: IInputProps) => {
   const { value } = props;
