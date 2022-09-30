@@ -1,25 +1,26 @@
 import { useState } from "react";
+import { faker } from "@faker-js/faker";
 
+import { withLayout } from "@hocs";
+import { MainLayout } from "@templates";
 import { LastRegisterCard, TextIcon } from "@molecules";
 import {
+  Box,
+  Card,
+  Icon,
+  Text,
+  Input,
   Avatar,
   Button,
-  Card,
-  Checkbox,
-  Icon,
-  Input,
-  Container,
   Tooltip,
-  Text,
-  Box,
+  Checkbox,
+  Container,
 } from "@atoms";
-import { Footer } from "@organisms";
 
-const avatar =
-  "https://static.vecteezy.com/system/resources/previews/002/275/847/non_2x/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg";
+const avatar = faker.image.avatar();
 
 const avatarHabbo =
-  "https://imager.rubyhotel.city/?&figure=sh-5823-90.ch-3059-110.fa-5065-72.lg-710-90.wa-3263-64-91.ha-1013-90.hr-828-49.hd-180-1379.ea-3226-110&direction=2&head_direction=2&size=m&headonly=1";
+  "https://imager.rubyhotel.city/?figure=sh-5823-90.ch-3059-110.fa-5065-72.lg-710-90.wa-3263-64-91.ha-1013-90.hr-828-49.hd-180-1379.ea-3226-110&direction=2&head_direction=2&size=m&headonly=1";
 
 const FrontPage = () => {
   const [name, setName] = useState("");
@@ -31,6 +32,9 @@ const FrontPage = () => {
         <Button>Primary</Button>
         <Button variant="secondary">Secondary</Button>
         <Button variant="secondary" size="small" mt={2}>
+          Secondary
+        </Button>
+        <Button variant="tertiary" size="small" mt={2}>
           Secondary
         </Button>
         <Button variant="secondary" size="medium" my={2}>
@@ -66,9 +70,8 @@ const FrontPage = () => {
           <Avatar src={avatar} size="small" />
         </Card>
       </Container>
-      <Footer />
     </>
   );
 };
 
-export default FrontPage;
+export default withLayout(FrontPage, MainLayout);
