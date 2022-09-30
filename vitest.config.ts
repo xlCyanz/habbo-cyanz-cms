@@ -23,6 +23,7 @@ export default defineConfig({
       "@molecules": r("src/ui/molecules"),
       "@organisms": r("src/ui/organisms"),
       "@templates": r("src/ui/templates"),
+      "@hocs": r("src/hoc's"),
     },
   },
 });
