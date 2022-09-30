@@ -2,14 +2,15 @@ import React from "react";
 import { Route, BrowserRouter, Routes as ReactRoutes } from "react-router-dom";
 
 import { Routes } from "@core";
+import { useAuth } from "@hooks";
 import { Button, ProtectedRoute } from "@atoms";
 import { FrontPage, HomePage, NotFoundPage, RegisterPage } from "@pages";
 
 const RootNavigation = () => {
-  const [auth, setAuth] = React.useState(false);
+  const { auth, changeAuth } = useAuth();
 
-  const handleLogin = () => setAuth(true);
-  const handleLogout = () => setAuth(false);
+  const handleLogin = () => changeAuth(true);
+  const handleLogout = () => changeAuth(false);
 
   return (
     <BrowserRouter>

@@ -1,14 +1,17 @@
+import React from "react";
 import { RootNavigation } from "@core";
 
-import { ThemeContextProvider } from "@contexts";
+import { AuthContextProvider, ThemeContextProvider } from "@contexts";
 
 import GlobalStyles from "./global-styles";
 
 const App = () => {
   return (
     <ThemeContextProvider>
-      <GlobalStyles />
-      <RootNavigation />
+      <AuthContextProvider>
+        <GlobalStyles />
+        <RootNavigation />
+      </AuthContextProvider>
     </ThemeContextProvider>
   );
 };

@@ -35,7 +35,7 @@
     "baseUrl": "./" /* Specify the base directory to resolve non-relative module names. */,
     "paths": {
       "@core": ["./src/core"],
-      "@hooks": ["src/hooks/*"],
+      "@hooks": ["src/hooks"],
       "@utils": ["src/utils"],
       "@atoms": ["src/ui/atoms"],
       "@pages": ["src/ui/pages"],

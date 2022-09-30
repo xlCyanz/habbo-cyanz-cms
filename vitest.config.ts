@@ -13,7 +13,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@core": r("src/core"),
-      "@hooks": r("src/hooks/*"),
+      "@hooks": r("src/hooks"),
       "@utils": r("src/utils"),
       "@atoms": r("src/ui/atoms"),
       "@pages": r("src/ui/pages"),
