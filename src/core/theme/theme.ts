@@ -109,6 +109,10 @@ const theme = makeTheme({
         backgroundColor: "secondaryLight",
       },
     },
+    tertiary: {
+      backgroundColor: "white",
+      color: "primary",
+    },
   },
   layout: {
     container: {
