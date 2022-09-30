@@ -3,3 +3,5 @@ export type { ITextIconProps } from "./text-icon";
 
 export { default as LastRegisterCard } from "./last-register-card";
 export type { ILastRegisterCardProps } from "./last-register-card";
+
+export { default as Navbar } from "./navbar";
