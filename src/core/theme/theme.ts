@@ -46,7 +46,7 @@ const theme = makeTheme({
     "16px solid",
     "32px solid",
   ],
-  breakpoints: [48, 62, 75, 87.5, 160].map((value) => `${value}em`),
+  breakpoints: ["48em", "62em", "75em", "87.5em", "160em"],
   radii: [0, 2, 4, 6, 12, 16, 18, "100%"],
   sizes: [16, 32, 64, 128, 256],
   maxWidths: [16, 32, 64, 128, 256, 512, 768, 1024, 1536],
@@ -102,10 +102,6 @@ const theme = makeTheme({
     tertiary: {
       backgroundColor: "white",
       color: "primary",
-    },
-    menu: {
-      height: 30,
-      width: 30,
     },
   },
   layout: {
