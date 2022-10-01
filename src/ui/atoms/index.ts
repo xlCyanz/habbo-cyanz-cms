@@ -42,3 +42,6 @@ export type { IDividerProps } from "./divider";
 
 export { default as NavLink } from "./navlink";
 export type { INavLinkProps } from "./navlink";
+
+export { default as MenuButton } from "./menu-button";
+export type { MenuButtonProps } from "./menu-button";
