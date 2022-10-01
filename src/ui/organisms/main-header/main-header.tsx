@@ -5,12 +5,42 @@ import { Box, Button, Container, Divider, Flex, Image } from "@atoms";
 
 import styles from "./main-header.styles";
 
+const routes = [
+  {
+    name: "Inicio",
+    path: "/home",
+  },
+  {
+    name: "Comunidad",
+    path: "/community",
+  },
+  {
+    name: "Equipo",
+    path: "/team",
+  },
+  {
+    name: "Noticia",
+    path: "/news",
+  },
+];
+
+const image =
+  "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4d8ccfa9-0c40-488c-8689-f397b4fbdb19/dcu3xrc-4a5c4133-41a9-4f4b-96a2-5070b4270b9e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzRkOGNjZmE5LTBjNDAtNDg4Yy04Njg5LWYzOTdiNGZiZGIxOVwvZGN1M3hyYy00YTVjNDEzMy00MWE5LTRmNGItOTZhMi01MDcwYjQyNzBiOWUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.lzxOE0J8_F4EGKmdSdSI-w0MXxpxBIUeZdOzkP83ZBM";
+
 const MainHeader = () => {
   return (
     <Box>
-      <Navbar />
+      <Navbar routes={routes} />
 
-      <Flex sx={styles.headerBoxImage}>
+      <Flex
+        sx={{
+          backgroundImage: `url(${image})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "right",
+          ...styles.headerBoxImage,
+        }}
+      >
         <Image
           id="logo"
           src="https://i.imgur.com/2mQ5Cbe.png"
@@ -20,16 +50,16 @@ const MainHeader = () => {
         <Box sx={styles.blurBackground} />
       </Flex>
 
-      <Container sx={styles.subNavbarContainer}>
+      {/* <Container sx={styles.subNavbarContainer}>
         <Flex id="subNavbar" sx={styles.subNavbar}>
           <Flex>Radio</Flex>
-          <Flex sx={{ width: "40%", alignItems: "center" }}>
+          <Flex sx={{ width: "30%", alignItems: "center" }}>
             <Button>Iniciar Sesion</Button>
-            <Divider vertical mx={3} />
+            <Divider vertical mx={4} />
             <Button variant="tertiary">Registrarse</Button>
           </Flex>
         </Flex>
-      </Container>
+      </Container> */}
     </Box>
   );
 };
