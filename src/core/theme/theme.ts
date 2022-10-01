@@ -7,15 +7,16 @@ const makeTheme = <T extends Theme>(t: T) => t;
 const theme = makeTheme({
   config: {},
   fonts: {
-    bold: "Raleway-Bold",
-    medium: "Raleway-Medium",
-    regular: "Raleway-Regular",
-    semiBold: "Raleway-SemiBold",
+    bold: "Montserrat-Bold",
+    medium: "Montserrat-Medium",
+    regular: "Montserrat-Regular",
+    semiBold: "Montserrat-SemiBold",
   },
   colors: {
     text: palette.white,
     inputText: palette.eerieBlack,
-    background: palette.eerieBlack,
+    background: palette.yankeesBlue,
+    foreground: palette.darkGunmetal,
     primary: palette.vividGamboge,
     primaryLight: palette.chineseYellow,
     secondary: palette.raisinBlack,
@@ -26,18 +27,7 @@ const theme = makeTheme({
   },
   fontWeights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64],
-  space: [
-    "0em",
-    "0.25em",
-    "0.5em",
-    "1em",
-    "1.5em",
-    "2em",
-    "2.5em",
-    "3em",
-    "4em",
-    "8em",
-  ],
+  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   lineHeights: {
     body: 1.5,
     heading: 1.125,
@@ -113,10 +103,14 @@ const theme = makeTheme({
       backgroundColor: "white",
       color: "primary",
     },
+    menu: {
+      height: 30,
+      width: 30,
+    },
   },
   layout: {
     container: {
-      px: [3, 5, 9],
+      px: [3, 5, 6],
     },
   },
   links: {

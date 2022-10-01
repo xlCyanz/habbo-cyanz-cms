@@ -5,4 +5,6 @@ export default {
   eerieBlack: "#181818",
   raisinBlack: "#222222",
   onyx: "#383838",
+  darkGunmetal: "#211F31",
+  yankeesBlue: "#242438",
 };

@@ -4,23 +4,23 @@ const GlobalStyles = () => (
   <Global
     styles={css`
       @font-face {
-        font-family: "Raleway-Regular";
-        src: url("/fonts/Raleway-Regular.ttf");
+        font-family: "Montserrat-Regular";
+        src: url("/fonts/Montserrat-Regular.ttf");
       }
 
       @font-face {
-        font-family: "Raleway-Bold";
-        src: url("/fonts/Raleway-Bold.ttf");
+        font-family: "Montserrat-Bold";
+        src: url("/fonts/Montserrat-Bold.ttf");
       }
 
       @font-face {
-        font-family: "Raleway-SemiBold";
-        src: url("/fonts/Raleway-SemiBold.ttf");
+        font-family: "Montserrat-SemiBold";
+        src: url("/fonts/Montserrat-SemiBold.ttf");
       }
 
       @font-face {
-        font-family: "Raleway-Medium";
-        src: url("/fonts/Raleway-Medium.ttf");
+        font-family: "Montserrat-Medium";
+        src: url("/fonts/Montserrat-Medium.ttf");
       }
     `}
   />
