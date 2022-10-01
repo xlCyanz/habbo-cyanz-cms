@@ -8,10 +8,8 @@ export type INavLinkProps = { to: string } & NavLinkProps;
 
 const styles = StylesUtils.create({
   default: {
-    py: 3,
-    px: 8,
-    fontSize: 2,
-    textTransform: "uppercase",
+    mx: [0, 5],
+    fontSize: [2, 2],
   },
 });
 
