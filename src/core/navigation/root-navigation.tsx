@@ -3,23 +3,14 @@ import { Route, BrowserRouter, Routes as ReactRoutes } from "react-router-dom";
 
 import { Routes } from "@core";
 import { useAuth } from "@hooks";
-import { Button, ProtectedRoute } from "@atoms";
+import { ProtectedRoute } from "@atoms";
 import { FrontPage, HomePage, NotFoundPage, RegisterPage } from "@pages";
 
 const RootNavigation = () => {
-  const { auth, changeAuth } = useAuth();
-
-  const handleLogin = () => changeAuth(true);
-  const handleLogout = () => changeAuth(false);
+  const { auth } = useAuth();
 
   return (
     <BrowserRouter>
-      {auth ? (
-        <Button onClick={handleLogout}>Sign Out</Button>
-      ) : (
-        <Button onClick={handleLogin}>Sign In</Button>
-      )}
-
       <ReactRoutes>
         {/* Routes logged */}
         <Route
