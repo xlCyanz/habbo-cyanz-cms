@@ -1,9 +1,9 @@
 import React from "react";
-import { Text, TextProps } from "theme-ui";
+import { Text, TextProps as TextPropsUI } from "theme-ui";
 
-export type ITextProps = TextProps;
+export type TextProps = TextPropsUI;
 
-const TextWrapper = (props: ITextProps) => {
+const TextWrapper = (props: TextProps) => {
   return <Text {...props} />;
 };
 
