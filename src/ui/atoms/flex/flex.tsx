@@ -1,9 +1,9 @@
 import React from "react";
-import { Flex, FlexProps } from "theme-ui";
+import { Flex, FlexProps as FlexPropsUI } from "theme-ui";
 
-export type IFlexProps = FlexProps;
+export type FlexProps = FlexPropsUI;
 
-const FlexWrapper = (props: IFlexProps) => {
+const FlexWrapper = (props: FlexProps) => {
   return <Flex {...props} />;
 };
 
