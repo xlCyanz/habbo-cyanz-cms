@@ -38,7 +38,7 @@ export { default as Flex } from "./flex";
 export type { IFlexProps } from "./flex";
 
 export { default as Divider } from "./divider";
-export type { IDividerProps } from "./divider";
+export type { DividerProps } from "./divider";
 
 export { default as NavLink } from "./navlink";
 export type { INavLinkProps } from "./navlink";

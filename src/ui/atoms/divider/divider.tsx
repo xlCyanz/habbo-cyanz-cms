@@ -1,22 +1,15 @@
 import React from "react";
-import { Divider, DividerProps } from "theme-ui";
+import { Divider, DividerProps as DividerPropsUI } from "theme-ui";
 
 import { StylesUtils } from "@utils";
 
-export interface IDividerProps extends DividerProps {
+import { styles } from "./divider.styles";
+
+export type DividerProps = DividerPropsUI & {
   vertical?: boolean;
-}
+};
 
-const styles = StylesUtils.create({
-  vertical: {
-    height: "70%",
-    borderWidth: 1,
-    borderStyle: "solid",
-    borderColor: "secondaryLight",
-  },
-});
-
-const DividerWrapper = ({ sx, vertical, ...props }: IDividerProps) => {
+const DividerWrapper = ({ sx, vertical, ...props }: DividerProps) => {
   return (
     <Divider
       sx={StylesUtils.compose(sx, vertical ? styles.vertical : {})}
