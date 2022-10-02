@@ -1,5 +1,9 @@
+import React from "react";
+
 import { TextIcon } from "@molecules";
-import { Box, Container, Divider, Flex, Icon, Text } from "@atoms";
+import { Container, Divider, Flex, Icon, Text } from "@atoms";
+
+import { styles } from "./footer.styles";
 
 const IconTextSocial = () => (
   <Flex sx={{ alignItems: "center" }}>
@@ -10,27 +14,32 @@ const IconTextSocial = () => (
   </Flex>
 );
 
-const DividerVertical = () => <Divider mx={3} vertical />;
+const DividerVertical = () => (
+  <Divider mx={[2, 3]} vertical sx={{ height: "20px" }} />
+);
 
 const Footer = () => {
   return (
-    <Box py={3} px={3} bg="secondary">
-      <Container sx={{ display: "flex", justifyContent: "space-between" }}>
-        <Flex sx={{ alignItems: "center" }}>
+    <Container as={Flex} py={3} sx={styles.footerContainer}>
+      <Flex sx={styles.footerCopyright}>
+        <Flex mr={1}>
           <TextIcon text="Copyright 2022" iconName="copyright" />
-          <Text variant="footerText">Ruby Hotel</Text>
-          <Text variant="footerText">Todos los derechos reservados</Text>
+          <Text variant="footerText" ml={1}>
+            Ruby Hotel.
+          </Text>
         </Flex>
 
-        <Flex sx={{ alignItems: "center" }}>
-          <IconTextSocial />
-          <DividerVertical />
-          <IconTextSocial />
-          <DividerVertical />
-          <IconTextSocial />
-        </Flex>
-      </Container>
-    </Box>
+        <Text>Todos los derechos reservados</Text>
+      </Flex>
+
+      <Flex sx={styles.footerSocial}>
+        <IconTextSocial />
+        <DividerVertical />
+        <IconTextSocial />
+        <DividerVertical />
+        <IconTextSocial />
+      </Flex>
+    </Container>
   );
 };
 

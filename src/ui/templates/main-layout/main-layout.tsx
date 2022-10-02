@@ -12,7 +12,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
     <Box>
       <MainHeader />
       {children}
-      {/* <Footer /> */}
+      <Footer />
     </Box>
   );
 };
