@@ -1,26 +1,27 @@
+import React from "react";
 import { Flex } from "theme-ui";
 
-import { Icon, IIconProps, ITextProps, Text } from "@atoms";
+import { Icon, IconProps, TextProps, Text } from "@atoms";
 
-export interface ITextIconProps {
+export type TextIconProps = {
   text: string;
-  icon: IIconProps["name"];
-  textProps?: ITextProps;
-  iconProps?: Omit<IIconProps, "name">;
-}
+  iconName: IconProps["name"];
+  textProps?: TextProps;
+  iconProps?: Omit<IconProps, "name">;
+};
 
 const TextIcon = ({
   text,
-  icon,
+  iconName,
   textProps = {},
   iconProps = {},
-}: ITextIconProps) => {
+}: TextIconProps) => {
   return (
     <Flex sx={{ alignItems: "center" }}>
       <Text mr={1} {...textProps}>
         {text}
       </Text>
-      <Icon name={icon} {...iconProps} />
+      <Icon name={iconName} {...iconProps} />
     </Flex>
   );
 };
