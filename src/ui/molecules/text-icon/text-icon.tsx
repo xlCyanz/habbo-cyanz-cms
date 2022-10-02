@@ -15,13 +15,14 @@ const TextIcon = ({
   iconName,
   textProps = {},
   iconProps = {},
+  ...props
 }: TextIconProps) => {
   return (
-    <Flex sx={{ alignItems: "center" }}>
-      <Text mr={1} {...textProps}>
+    <Flex sx={{ alignItems: "center" }} {...props}>
+      <Text data-testid="textIcon_Text" mr={1} {...textProps}>
         {text}
       </Text>
-      <Icon name={iconName} {...iconProps} />
+      <Icon data-testid="textIcon_Icon" name={iconName} {...iconProps} />
     </Flex>
   );
 };
