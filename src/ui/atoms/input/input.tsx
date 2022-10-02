@@ -1,16 +1,16 @@
-import React, { ReactElement } from "react";
-import { Flex, Input, InputProps } from "theme-ui";
+import React from "react";
+import { Flex, Input, InputProps as InputPropsUI } from "theme-ui";
 
 import { styles } from "./input.styles";
 
-export interface IInputProps extends InputProps {
+export type InputProps = InputPropsUI & {
   value: string;
   placeholder: string;
-  renderLeft?: ReactElement;
-  renderRight?: ReactElement;
-}
+  renderLeft?: React.ReactElement;
+  renderRight?: React.ReactElement;
+};
 
-const InputWrapper = ({ renderLeft, renderRight, ...props }: IInputProps) => {
+const InputWrapper = ({ renderLeft, renderRight, ...props }: InputProps) => {
   const { value } = props;
 
   return (

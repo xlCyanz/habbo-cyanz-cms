@@ -5,7 +5,7 @@ export { default as ProtectedRoute } from "./protected-route";
 export type { IProtectedRouteProps } from "./protected-route";
 
 export { default as Input } from "./input";
-export type { IInputProps } from "./input";
+export type { InputProps } from "./input";
 
 export { default as Icon } from "./icon";
 export type { IconProps } from "./icon";
