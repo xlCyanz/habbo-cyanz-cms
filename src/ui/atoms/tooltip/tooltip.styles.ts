@@ -1,7 +1,7 @@
 import { StylesUtils } from "@utils";
 
-const TOOLTIP_H_MARGIN = "40px";
-const TOOLTIP_V_MARGIN = "10px";
+const TOOLTIP_H_MARGIN = "45px";
+const TOOLTIP_V_MARGIN = "15px";
 const TOOLTIP_ARROW_SIZE = "8px";
 
 export type AlignVariants = "top" | "bottom" | "left" | "right";
@@ -19,7 +19,7 @@ export const styles = StylesUtils.create({
     fontFamily: "medium",
     left: "50%",
     transform: "translateX(-50%)",
-    backgroundColor: "secondaryLight",
+    backgroundColor: "highlight",
     fontSize: "13px",
     lineHeight: 1,
     zIndex: 100,
@@ -28,8 +28,8 @@ export const styles = StylesUtils.create({
       content: "' '",
       left: "50%",
       border: "solid transparent",
-      height: 0,
-      width: 0,
+      height: null,
+      width: null,
       position: "absolute",
       pointerEvents: "none",
       borderWidth: TOOLTIP_ARROW_SIZE,
@@ -43,7 +43,7 @@ export const stylesAlign = StylesUtils.create<AlignVariants>({
     top: `calc(${TOOLTIP_H_MARGIN} * -1)`,
     ":before": {
       top: "100%",
-      borderTopColor: "secondaryLight",
+      borderTopColor: "highlight",
     },
   },
   right: {
@@ -52,14 +52,14 @@ export const stylesAlign = StylesUtils.create<AlignVariants>({
     transform: "translateX(0) translateY(-50%)",
     ":before": {
       left: `calc(${TOOLTIP_ARROW_SIZE} * -1)`,
-      borderRightColor: "secondaryLight",
+      borderRightColor: "highlight",
     },
   },
   bottom: {
     bottom: `calc(${TOOLTIP_H_MARGIN} * -1)`,
     ":before": {
       bottom: "100%",
-      borderBottomColor: "secondaryLight",
+      borderBottomColor: "highlight",
     },
   },
   left: {
@@ -68,8 +68,8 @@ export const stylesAlign = StylesUtils.create<AlignVariants>({
     top: "50%",
     transform: "translateX(0) translateY(-50%)",
     ":before": {
-      right: `calc(${TOOLTIP_ARROW_SIZE} * -2)`,
-      borderLeftColor: "secondaryLight",
+      right: `calc(${TOOLTIP_ARROW_SIZE} * -1)`,
+      borderLeftColor: "highlight",
     },
   },
 });

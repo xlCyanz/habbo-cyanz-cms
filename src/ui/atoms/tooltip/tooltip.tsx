@@ -17,6 +17,7 @@ const TooltipWrapper = ({
   content,
   direction = "top",
   delay = 300,
+  ...props
 }: TooltipProps) => {
   const [active, setActive] = React.useState(false);
   let timeout: ReturnType<typeof setTimeout>;
@@ -35,6 +36,7 @@ const TooltipWrapper = ({
       sx={styles.container}
       onMouseEnter={showTooltip}
       onMouseLeave={hideTooltip}
+      {...props}
     >
       {children}
       {active && (
