@@ -23,7 +23,7 @@ export { default as Image } from "./image";
 export type { IImageProps } from "./image";
 
 export { default as Avatar } from "./avatar";
-export type { IAvatarProps } from "./avatar";
+export type { AvatarProps } from "./avatar";
 
 export { default as Card } from "./card";
 export type { ICardProps } from "./card";

@@ -1,2 +1,2 @@
 export { default } from "./avatar";
-export type { IAvatarProps } from "./avatar";
+export type { AvatarProps } from "./avatar";

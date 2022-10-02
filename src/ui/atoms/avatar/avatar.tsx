@@ -1,33 +1,18 @@
 import React from "react";
-import { Avatar, AvatarProps } from "theme-ui";
+import { Avatar, AvatarProps as AvatarPropsUI } from "theme-ui";
 
 import { SizeVariant } from "@types";
 import { StylesUtils } from "@utils";
 
-export interface IAvatarProps extends AvatarProps {
+import { styleSize } from "./avatar.styles";
+
+export type AvatarProps = AvatarPropsUI & {
   src: string;
   size?: SizeVariant;
-}
+};
 
-const styleSize = StylesUtils.create<SizeVariant>({
-  small: {
-    width: 48,
-    height: 48,
-  },
-  medium: {
-    width: 72,
-    height: 72,
-  },
-  large: {
-    width: 96,
-    height: 96,
-  },
-});
-
-const AvatarWrapper = ({ size = "medium", ...props }: IAvatarProps) => {
-  return (
-    <Avatar variant="avatarBorder" sx={{ ...styleSize[size] }} {...props} />
-  );
+const AvatarWrapper = ({ size = "medium", sx, ...props }: AvatarProps) => {
+  return <Avatar {...props} sx={StylesUtils.compose(sx, styleSize[size])} />;
 };
 
 export default AvatarWrapper;

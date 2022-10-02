@@ -67,11 +67,6 @@ const theme = makeTheme({
       fontFamily: "semiBold",
     },
   },
-  images: {
-    avatarBorder: {
-      borderRadius: 7,
-    },
-  },
   cards: {
     primary: {
       p: 2,
