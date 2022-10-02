@@ -1,13 +1,24 @@
 import React from "react";
-import { Checkbox, CheckboxProps, Label } from "theme-ui";
+import {
+  Label,
+  Checkbox,
+  LabelProps,
+  CheckboxProps as CheckboxPropsUI,
+} from "theme-ui";
 
-export interface ICheckboxProps extends CheckboxProps {
+import { StylesUtils } from "@utils";
+
+export type CheckboxProps = CheckboxPropsUI & {
   label: string;
-}
+  labelProps?: LabelProps;
+};
 
-const CheckboxWrapper = ({ label, ...props }: ICheckboxProps) => {
+const CheckboxWrapper = ({ label, labelProps, ...props }: CheckboxProps) => {
   return (
-    <Label sx={{ alignItems: "center" }}>
+    <Label
+      sx={StylesUtils.compose(labelProps?.sx, { alignItems: "center" })}
+      {...labelProps}
+    >
       <Checkbox {...props} />
       {label}
     </Label>

@@ -11,7 +11,7 @@ export { default as Icon } from "./icon";
 export type { IIconProps } from "./icon";
 
 export { default as Checkbox } from "./checkbox";
-export type { ICheckboxProps } from "./checkbox";
+export type { CheckboxProps } from "./checkbox";
 
 export { default as Text } from "./text";
 export type { ITextProps } from "./text";
