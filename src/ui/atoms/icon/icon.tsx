@@ -1,13 +1,13 @@
-import { ComponentProps } from "react";
+import React from "react";
 import { IconType } from "react-icons";
 
 import bundle from "./icon.bundle";
 
-export interface IIconProps extends ComponentProps<IconType> {
+export type IconProps = React.ComponentProps<IconType> & {
   name: keyof typeof bundle;
-}
+};
 
-const Icon = ({ name, ...props }: IIconProps) => {
+const Icon = ({ name, ...props }: IconProps) => {
   const IconComponent = name ? bundle[name] : null;
   return IconComponent ? <IconComponent {...props} /> : null;
 };

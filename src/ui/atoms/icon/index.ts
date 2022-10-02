@@ -1,2 +1,2 @@
 export { default } from "./icon";
-export type { IIconProps } from "./icon";
+export type { IconProps } from "./icon";
