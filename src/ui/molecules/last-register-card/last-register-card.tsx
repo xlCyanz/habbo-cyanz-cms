@@ -1,11 +1,11 @@
 import { Card, Text, Tooltip } from "@atoms";
 
-export interface ILastRegisterCardProps {
+export type LastRegisterCardProps = {
   avatar: string;
   username: string;
-}
+};
 
-const LastRegisterCard = ({ avatar, username }: ILastRegisterCardProps) => {
+const LastRegisterCard = ({ avatar, username }: LastRegisterCardProps) => {
   return (
     <Tooltip content={<Text>{username}</Text>}>
       <Card
