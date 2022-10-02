@@ -29,7 +29,7 @@ export { default as Card } from "./card";
 export type { CardProps } from "./card";
 
 export { default as Container } from "./container";
-export type { IContainerProps } from "./container";
+export type { ContainerProps } from "./container";
 
 export { default as Tooltip } from "./tooltip";
 export type { ITooltipProps } from "./tooltip";

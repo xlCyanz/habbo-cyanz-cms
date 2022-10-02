@@ -1,9 +1,9 @@
 import React from "react";
-import { Container, ContainerProps } from "theme-ui";
+import { Container, ContainerProps as ContainerPropsUI } from "theme-ui";
 
-export type IContainerProps = ContainerProps;
+export type ContainerProps = ContainerPropsUI;
 
-const ContainerWrapper = (props: IContainerProps) => {
+const ContainerWrapper = (props: ContainerProps) => {
   return <Container {...props} />;
 };
 
