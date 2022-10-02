@@ -1,9 +1,9 @@
 import React from "react";
-import { Image, ImageProps } from "theme-ui";
+import { Image, ImageProps as ImagePropsUI } from "theme-ui";
 
-export type IImageProps = ImageProps;
+export type ImageProps = ImagePropsUI;
 
-const ImageWrapper = (props: IImageProps) => {
+const ImageWrapper = (props: ImageProps) => {
   return <Image {...props} />;
 };
 

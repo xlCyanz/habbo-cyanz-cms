@@ -20,7 +20,7 @@ export { default as Box } from "./box";
 export type { BoxProps } from "./box";
 
 export { default as Image } from "./image";
-export type { IImageProps } from "./image";
+export type { ImageProps } from "./image";
 
 export { default as Avatar } from "./avatar";
 export type { AvatarProps } from "./avatar";
