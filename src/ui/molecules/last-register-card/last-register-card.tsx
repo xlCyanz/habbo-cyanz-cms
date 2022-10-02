@@ -1,3 +1,4 @@
+import React from "react";
 import { Card, Text, Tooltip } from "@atoms";
 
 export type LastRegisterCardProps = {
@@ -7,15 +8,16 @@ export type LastRegisterCardProps = {
 
 const LastRegisterCard = ({ avatar, username }: LastRegisterCardProps) => {
   return (
-    <Tooltip content={<Text>{username}</Text>}>
+    <Tooltip
+      data-testid="lastRegisterCard_Tooltip"
+      delay={100}
+      content={<Text>{username}</Text>}
+    >
       <Card
-        variant="secondary"
+        data-testid="lastRegister_Card"
+        variant="lastRegister"
         sx={{
           backgroundImage: `url(${avatar})`,
-          height: 60,
-          width: 60,
-          backgroundPosition: "50% 20%",
-          cursor: "pointer",
         }}
       />
     </Tooltip>

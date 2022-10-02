@@ -13,3 +13,8 @@ export const tooltipTest = () => ({
   contentText: faker.random.words(2),
   childrenText: faker.random.words(3),
 });
+
+export const lastRegisterCardTest = () => ({
+  username: faker.name.firstName(),
+  avatar: faker.image.avatar(),
+});

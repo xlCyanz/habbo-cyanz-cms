@@ -70,10 +70,14 @@ const theme = makeTheme({
       p: 2,
       borderRadius: 3,
     },
-    secondary: {
+    lastRegister: {
       borderRadius: 3,
       boxShadow: "0 0 8px rgba(0, 0, 0, .3)",
-      backgroundColor: "secondary",
+      backgroundColor: "foreground",
+      height: 60,
+      width: 60,
+      backgroundPosition: "50% 20%",
+      cursor: "pointer",
       "&:hover": {
         backgroundColor: "primary",
       },
