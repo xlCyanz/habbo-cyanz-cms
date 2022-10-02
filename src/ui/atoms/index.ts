@@ -26,7 +26,7 @@ export { default as Avatar } from "./avatar";
 export type { AvatarProps } from "./avatar";
 
 export { default as Card } from "./card";
-export type { ICardProps } from "./card";
+export type { CardProps } from "./card";
 
 export { default as Container } from "./container";
 export type { IContainerProps } from "./container";

@@ -1,9 +1,9 @@
 import React from "react";
-import { Card, CardProps } from "theme-ui";
+import { Card, CardProps as CardPropsUI } from "theme-ui";
 
-export type ICardProps = CardProps;
+export type CardProps = CardPropsUI;
 
-const CardWrapper = (props: ICardProps) => {
+const CardWrapper = (props: CardProps) => {
   return <Card {...props} />;
 };
 
