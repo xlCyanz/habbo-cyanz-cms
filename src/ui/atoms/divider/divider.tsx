@@ -12,7 +12,7 @@ export type DividerProps = DividerPropsUI & {
 const DividerWrapper = ({ sx, vertical, ...props }: DividerProps) => {
   return (
     <Divider
-      sx={StylesUtils.compose(sx, vertical ? styles.vertical : {})}
+      sx={StylesUtils.compose(vertical ? styles.vertical : {}, sx)}
       {...props}
     />
   );

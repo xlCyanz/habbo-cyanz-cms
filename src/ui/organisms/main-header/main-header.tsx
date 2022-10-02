@@ -42,7 +42,7 @@ const MainHeader = () => {
         }}
       >
         <Image
-          id="logo"
+          id="logo-habboi"
           src="https://i.imgur.com/2mQ5Cbe.png"
           alt="Habboi"
           sx={styles.headerImage}
@@ -50,16 +50,16 @@ const MainHeader = () => {
         <Box sx={styles.blurBackground} />
       </Flex>
 
-      {/* <Container sx={styles.subNavbarContainer}>
-        <Flex id="subNavbar" sx={styles.subNavbar}>
+      <Container sx={styles.subHeaderContainer}>
+        <Flex id="subNavbar" sx={styles.subHeader}>
           <Flex>Radio</Flex>
-          <Flex sx={{ width: "30%", alignItems: "center" }}>
+          <Flex sx={{ width: ["100%", "50%", "40%"], alignItems: "center" }}>
             <Button>Iniciar Sesion</Button>
-            <Divider vertical mx={4} />
+            <Divider vertical mx={[2, 3, 4]} sx={{ height: "25px" }} />
             <Button variant="tertiary">Registrarse</Button>
           </Flex>
         </Flex>
-      </Container> */}
+      </Container>
     </Box>
   );
 };

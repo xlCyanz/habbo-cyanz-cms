@@ -21,12 +21,13 @@ const styles = StylesUtils.create({
     left: 0,
     zIndex: 1,
   },
-  subNavbar: {
+  subHeader: {
     py: 3,
     bg: "foreground",
     justifyContent: "space-between",
+    flexDirection: ["column", "row"],
   },
-  subNavbarContainer: {
+  subHeaderContainer: {
     bg: "foreground",
   },
 });
