@@ -17,7 +17,7 @@ const Footer = () => {
     <Box py={3} px={3} bg="secondary">
       <Container sx={{ display: "flex", justifyContent: "space-between" }}>
         <Flex sx={{ alignItems: "center" }}>
-          <TextIcon text="Copyright 2022" icon="copyright" />
+          <TextIcon text="Copyright 2022" iconName="copyright" />
           <Text variant="footerText">Ruby Hotel</Text>
           <Text variant="footerText">Todos los derechos reservados</Text>
         </Flex>
