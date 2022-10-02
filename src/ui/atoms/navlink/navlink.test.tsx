@@ -10,15 +10,13 @@ import NavLink from "./navlink";
 describe("<NavLink/>", () => {
   const testId = "navlink_Test";
   const href = "/testing";
-  const navLinkTxt = "Testing";
+  const navLinkTitle = "Testing";
 
   beforeEach(() => {
     render(
       <ThemeContextProvider>
         <BrowserRouter>
-          <NavLink data-testid={testId} to={href}>
-            {navLinkTxt}
-          </NavLink>
+          <NavLink data-testid={testId} title={navLinkTitle} to={href} />
         </BrowserRouter>
       </ThemeContextProvider>,
     );
@@ -31,5 +29,9 @@ describe("<NavLink/>", () => {
   test("Should navlink have href atribute", async () => {
     const link = await screen.findByTestId<HTMLAnchorElement>(testId);
     expect(link.href).toContain(href);
+  });
+
+  test("Should render text", async () => {
+    expect(screen.getByText(navLinkTitle)).toBeInTheDocument();
   });
 });
