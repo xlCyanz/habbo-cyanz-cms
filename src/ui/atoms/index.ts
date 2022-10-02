@@ -32,7 +32,7 @@ export { default as Container } from "./container";
 export type { ContainerProps } from "./container";
 
 export { default as Tooltip } from "./tooltip";
-export type { ITooltipProps } from "./tooltip";
+export type { TooltipProps } from "./tooltip";
 
 export { default as Flex } from "./flex";
 export type { FlexProps } from "./flex";

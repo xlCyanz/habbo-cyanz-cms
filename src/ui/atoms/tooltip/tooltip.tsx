@@ -5,19 +5,19 @@ import { StylesUtils } from "@utils";
 import Box from "../box";
 import { AlignVariants, styles, stylesAlign } from "./tooltip.styles";
 
-export interface ITooltipProps {
+export type TooltipProps = {
   children: React.ReactNode;
   content: React.ReactNode;
   direction?: AlignVariants;
   delay?: number;
-}
+};
 
 const TooltipWrapper = ({
   children,
   content,
   direction = "top",
   delay = 300,
-}: ITooltipProps) => {
+}: TooltipProps) => {
   const [active, setActive] = React.useState(false);
   let timeout: ReturnType<typeof setTimeout>;
 
