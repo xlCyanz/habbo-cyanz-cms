@@ -34,9 +34,6 @@ const FrontPage = () => {
         <Button variant="secondary" size="small" mt={2}>
           Secondary
         </Button>
-        <Button variant="tertiary" size="small" mt={2}>
-          Secondary
-        </Button>
         <Button variant="secondary" size="medium" my={2}>
           Secondary
         </Button>

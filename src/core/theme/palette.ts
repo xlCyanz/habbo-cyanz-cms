@@ -7,4 +7,5 @@ export default {
   onyx: "#383838",
   darkGunmetal: "#211F31",
   yankeesBlue: "#242438",
+  independence: "#48446A",
 };

@@ -5,6 +5,6 @@ export const styles = StylesUtils.create({
     height: "70%",
     borderWidth: 1,
     borderStyle: "solid",
-    borderColor: "secondaryLight",
+    borderColor: "highlight",
   },
 });

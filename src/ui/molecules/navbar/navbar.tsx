@@ -30,10 +30,13 @@ const Navbar = ({ routes }: NavbarProps) => {
         />
 
         <Box sx={{ display: ["none", "flex"] }}>
-          {routes.map((route, index) => (
-            <NavLink key={`${route.name} ${index}`} to={route.path}>
-              {route.name}
-            </NavLink>
+          {routes.map((route) => (
+            <NavLink
+              key={`${route.name}-Desktop`}
+              active={window.location.pathname === route.path}
+              title={route.name}
+              to={route.path}
+            />
           ))}
         </Box>
       </Flex>
@@ -45,6 +48,8 @@ const Navbar = ({ routes }: NavbarProps) => {
           {routes.map((route) => (
             <NavLink
               key={`${route.name}-Mobile`}
+              active={window.location.pathname === route.path}
+              title={route.name}
               to={route.path}
               sx={styles.navLinkMobile}
             >

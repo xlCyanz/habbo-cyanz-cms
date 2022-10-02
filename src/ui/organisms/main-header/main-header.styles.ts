@@ -4,13 +4,14 @@ const styles = StylesUtils.create({
   headerBoxImage: {
     height: [3, 4],
     width: "100%",
-    // bg: "secondary",
     justifyContent: "center",
     alignItems: "center",
     position: "relative",
+    overflow: "hidden",
   },
   headerImage: {
     zIndex: 2,
+    position: "absolute",
   },
   blurBackground: {
     backdropFilter: "blur(0.5px)",
@@ -22,7 +23,7 @@ const styles = StylesUtils.create({
     zIndex: 1,
   },
   subHeader: {
-    py: 3,
+    py: 2,
     bg: "foreground",
     justifyContent: "space-between",
     flexDirection: ["column", "row"],

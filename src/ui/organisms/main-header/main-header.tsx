@@ -8,15 +8,11 @@ import styles from "./main-header.styles";
 const routes = [
   {
     name: "Inicio",
-    path: "/home",
+    path: "/",
   },
   {
     name: "Comunidad",
     path: "/community",
-  },
-  {
-    name: "Equipo",
-    path: "/team",
   },
   {
     name: "Noticia",
@@ -55,8 +51,8 @@ const MainHeader = () => {
           <Flex>Radio</Flex>
           <Flex sx={{ width: ["100%", "50%", "40%"], alignItems: "center" }}>
             <Button>Iniciar Sesion</Button>
-            <Divider vertical mx={[2, 3, 4]} sx={{ height: "25px" }} />
-            <Button variant="tertiary">Registrarse</Button>
+            <Divider vertical mx={[2, 3, null, 4]} sx={{ height: "25px" }} />
+            <Button variant="secondary">Registrarse</Button>
           </Flex>
         </Flex>
       </Container>

@@ -19,10 +19,8 @@ const theme = makeTheme({
     foreground: palette.darkGunmetal,
     primary: palette.vividGamboge,
     primaryLight: palette.chineseYellow,
-    secondary: palette.raisinBlack,
-    secondaryLight: palette.onyx,
     accent: "",
-    highlight: "",
+    highlight: palette.independence,
     muted: "",
   },
   fontWeights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
@@ -89,29 +87,17 @@ const theme = makeTheme({
       },
     },
     secondary: {
-      backgroundColor: "secondary",
-      "&:hover": {
-        backgroundColor: "secondaryLight",
-      },
-    },
-    tertiary: {
       backgroundColor: "white",
       color: "primary",
+      "&:hover": {
+        backgroundColor: "primaryLight",
+        color: "white",
+      },
     },
   },
   layout: {
     container: {
       px: [3, 5, 6],
-    },
-  },
-  links: {
-    nav: {
-      "&:hover": {
-        color: "primary",
-      },
-    },
-    navActive: {
-      color: "primary",
     },
   },
 });

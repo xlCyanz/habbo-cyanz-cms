@@ -4,22 +4,27 @@ import { NavLink, NavLinkProps as NavLinkPropsUI } from "theme-ui";
 
 import { StylesUtils } from "@utils";
 
-export type NavLinkProps = NavLinkPropsUI & { to: string };
+import Text from "../text";
+import { styles } from "./navlink.styles";
 
-const styles = StylesUtils.create({
-  default: {
-    mx: [0, 5],
-    fontSize: [2, 2],
-  },
-});
+export type NavLinkProps = NavLinkPropsUI & {
+  to: string;
+  title: string;
+  active?: boolean;
+};
 
-const NavLinkWrapper = ({ sx, ...props }: NavLinkProps) => {
+const NavLinkWrapper = ({ sx, title, active, ...props }: NavLinkProps) => {
   return (
-    <NavLink
-      as={Link}
-      sx={StylesUtils.compose(sx, styles.default)}
-      {...props}
-    />
+    <NavLink as={Link} sx={StylesUtils.compose(styles.navlink, sx)} {...props}>
+      <Text
+        sx={StylesUtils.compose(
+          active ? styles.navLinkTextActive : {},
+          styles.navLinkText,
+        )}
+      >
+        {title}
+      </Text>
+    </NavLink>
   );
 };
 
