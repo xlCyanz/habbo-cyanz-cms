@@ -1,2 +1,2 @@
 export { default } from "./box";
-export type { IBoxProps } from "./box";
+export type { BoxProps } from "./box";

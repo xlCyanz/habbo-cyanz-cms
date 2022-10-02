@@ -1,9 +1,9 @@
 import React from "react";
-import { Box, BoxProps } from "theme-ui";
+import { Box, BoxProps as BoxPropsUI } from "theme-ui";
 
-export type IBoxProps = BoxProps;
+export type BoxProps = BoxPropsUI;
 
-const BoxWrapper = (props: IBoxProps) => {
+const BoxWrapper = (props: BoxProps) => {
   return <Box {...props} />;
 };
 
