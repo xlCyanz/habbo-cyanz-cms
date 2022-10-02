@@ -1,2 +1,2 @@
 export { default } from "./navlink";
-export type { INavLinkProps } from "./navlink";
+export type { NavLinkProps } from "./navlink";

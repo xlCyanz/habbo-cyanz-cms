@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { NavLink, NavLinkProps } from "theme-ui";
+import { NavLink, NavLinkProps as NavLinkPropsUI } from "theme-ui";
 
 import { StylesUtils } from "@utils";
 
-export type INavLinkProps = { to: string } & NavLinkProps;
+export type NavLinkProps = NavLinkPropsUI & { to: string };
 
 const styles = StylesUtils.create({
   default: {
@@ -13,11 +13,11 @@ const styles = StylesUtils.create({
   },
 });
 
-const NavLinkWrapper = ({ sx, ...props }: INavLinkProps) => {
+const NavLinkWrapper = ({ sx, ...props }: NavLinkProps) => {
   return (
     <NavLink
       as={Link}
-      sx={StylesUtils.compose(styles.default, sx)}
+      sx={StylesUtils.compose(sx, styles.default)}
       {...props}
     />
   );
