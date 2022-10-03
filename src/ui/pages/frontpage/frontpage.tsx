@@ -3,7 +3,7 @@ import { faker } from "@faker-js/faker";
 
 import { withLayout } from "@hocs";
 import { MainLayout } from "@templates";
-import { LastRegisterCard, TextIcon } from "@molecules";
+import { LastRegisterCard, NewsCard, TextIcon } from "@molecules";
 import {
   Box,
   Card,
@@ -51,6 +51,13 @@ const FrontPage = () => {
           </Tooltip>
         </Box>
         <LastRegisterCard avatar={avatarHabbo} username="xlCyanz" />
+        <Box my={3}>
+          <NewsCard
+            title="Lorem Ipsum"
+            image="https://images.habbo.com/web_images/habbo-web-articles/lpromo_Room_wired.png"
+            author="xlCyanz"
+          />
+        </Box>
         <Icon name="arrow-right" size={20} />
         <Icon name="discord" size={20} />
         <Icon name="instagram" size={20} />

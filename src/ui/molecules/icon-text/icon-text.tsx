@@ -3,28 +3,28 @@ import { Flex } from "theme-ui";
 
 import { Icon, IconProps, TextProps, Text } from "@atoms";
 
-export type TextIconProps = {
+export type IconTextProps = {
   text: string;
   iconName: IconProps["name"];
   textProps?: TextProps;
   iconProps?: Omit<IconProps, "name">;
 };
 
-const TextIcon = ({
+const IconText = ({
   text,
   iconName,
   textProps = {},
   iconProps = {},
   ...props
-}: TextIconProps) => {
+}: IconTextProps) => {
   return (
     <Flex sx={{ alignItems: "center" }} {...props}>
-      <Text data-testid="textIcon_Text" mr={1} {...textProps}>
+      <Icon data-testid="iconText_Icon" name={iconName} {...iconProps} />
+      <Text data-testid="iconText_Text" ml={1} {...textProps}>
         {text}
       </Text>
-      <Icon data-testid="textIcon_Icon" name={iconName} {...iconProps} />
     </Flex>
   );
 };
 
-export default TextIcon;
+export default IconText;

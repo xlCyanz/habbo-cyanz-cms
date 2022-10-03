@@ -4,18 +4,18 @@ import { beforeEach, describe, expect, test } from "vitest";
 
 import { ThemeContextProvider } from "@contexts";
 
-import TextIcon from "./text-icon";
+import IconText from "./icon-text";
 
-describe("<TextIcon/>", () => {
-  const testId = "textIcon_Test";
+describe("<IconText/>", () => {
+  const testId = "iconText_Test";
   const text = "Amada Amante";
-  const testIdText = "textIcon_Text";
-  const testIdIcon = "textIcon_Icon";
+  const testIdText = "iconText_Text";
+  const testIdIcon = "iconText_Icon";
 
   beforeEach(() => {
     render(
       <ThemeContextProvider>
-        <TextIcon data-testid={testId} text={text} iconName="menu" />
+        <IconText data-testid={testId} text={text} iconName="menu" />
       </ThemeContextProvider>,
     );
   });

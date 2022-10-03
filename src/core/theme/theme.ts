@@ -60,6 +60,14 @@ const theme = makeTheme({
       color: "text",
       fontSize: 1,
     },
+    newsCardTitle: {
+      fontSize: 2,
+      fontWeight: 600,
+    },
+    newsCardSubtitle: {
+      fontSize: 0,
+      fontFamily: "medium",
+    },
     footerText: {
       fontSize: 1,
       fontFamily: "semiBold",
@@ -81,6 +89,12 @@ const theme = makeTheme({
       "&:hover": {
         backgroundColor: "primary",
       },
+    },
+    news: {
+      p: 2,
+      bg: "foreground",
+      width: "50%",
+      borderRadius: 3,
     },
   },
   buttons: {
