@@ -18,6 +18,10 @@ const routes = [
     name: "Noticia",
     path: "/news",
   },
+  {
+    name: "Dev",
+    path: "/dev",
+  },
 ];
 
 const image =

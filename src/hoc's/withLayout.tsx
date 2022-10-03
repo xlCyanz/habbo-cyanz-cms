@@ -1,16 +1,16 @@
-import React, { ReactNode } from "react";
+import React from "react";
 
-type ComponentType = React.ComponentType<any>;
-type LayoutType = React.ComponentType<{ children: ReactNode }>;
+const withLayout = (
+  Component: () => React.ReactElement,
+  Layout: (props: { children: React.ReactNode }) => React.ReactElement,
+): React.ReactElement => {
+  const ComponentWithLayout = () => (
+    <Layout>
+      <Component />
+    </Layout>
+  );
 
-const withLayout = (Component: ComponentType, Layout: LayoutType) => {
-  return function ComponentWithLayout() {
-    return (
-      <Layout>
-        <Component />
-      </Layout>
-    );
-  };
+  return <ComponentWithLayout />;
 };
 
 export default withLayout;

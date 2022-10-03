@@ -4,7 +4,16 @@ import { Route, BrowserRouter, Routes as ReactRoutes } from "react-router-dom";
 import { Routes } from "@core";
 import { useAuth } from "@hooks";
 import { ProtectedRoute } from "@atoms";
-import { FrontPage, HomePage, NotFoundPage, RegisterPage } from "@pages";
+import {
+  DevPage,
+  FrontPage,
+  HomePage,
+  NotFoundPage,
+  RegisterPage,
+} from "@pages";
+
+import { withLayout } from "@hocs";
+import { MainLayout } from "@templates";
 
 const RootNavigation = () => {
   const { auth } = useAuth();
@@ -27,12 +36,10 @@ const RootNavigation = () => {
             <ProtectedRoute isAllowed={!auth} redirectPath={Routes.HOME_PAGE} />
           }
         >
-          <Route index id="FrontPage_Index" element={<FrontPage />} />
-
           <Route
-            id="FrontPage"
-            path={Routes.FRONT_PAGE}
-            element={<FrontPage />}
+            index
+            id="FrontPage_Index"
+            element={withLayout(FrontPage, MainLayout)}
           />
 
           <Route
@@ -43,6 +50,11 @@ const RootNavigation = () => {
         </Route>
 
         <Route path="*" element={<NotFoundPage />} />
+        <Route
+          id="DevPage"
+          path={Routes.DEV_PAGE}
+          element={withLayout(DevPage, MainLayout)}
+        />
       </ReactRoutes>
     </BrowserRouter>
   );

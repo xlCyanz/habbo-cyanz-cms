@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Box } from "@atoms";
+import { Flex } from "@atoms";
 import { Footer, MainHeader } from "@organisms";
 
 type MainLayoutProps = {
@@ -9,11 +9,11 @@ type MainLayoutProps = {
 
 const MainLayout = ({ children }: MainLayoutProps) => {
   return (
-    <Box>
+    <Flex sx={{ flexDirection: "column", height: "100vh" }}>
       <MainHeader />
-      {children}
+      <Flex sx={{ flex: 1 }}>{children}</Flex>
       <Footer />
-    </Box>
+    </Flex>
   );
 };
 

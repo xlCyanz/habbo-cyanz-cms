@@ -1,8 +1,6 @@
 import React from "react";
 import { faker } from "@faker-js/faker";
 
-import { withLayout } from "@hocs";
-import { MainLayout } from "@templates";
 import { LastRegisterCard, NewsCard, TextIcon } from "@molecules";
 import {
   Box,
@@ -76,4 +74,4 @@ const DevPage = () => {
   );
 };
 
-export default withLayout(DevPage, MainLayout);
+export default DevPage;
