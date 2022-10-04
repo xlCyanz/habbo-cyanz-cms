@@ -19,7 +19,6 @@ export default defineConfig({
       "@pages": r("src/ui/pages"),
       "@types": r("src/types"),
       "@contexts": r("src/contexts"),
-      "@interfaces": r("src/interfaces/*"),
       "@molecules": r("src/ui/molecules"),
       "@organisms": r("src/ui/organisms"),
       "@templates": r("src/ui/templates"),

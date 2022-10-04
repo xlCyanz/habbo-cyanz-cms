@@ -41,7 +41,6 @@
       "@pages": ["src/ui/pages"],
       "@types": ["src/types"],
       "@contexts": ["src/contexts"],
-      "@interfaces": ["src/interfaces/*"],
       "@molecules": ["src/ui/molecules"],
       "@organisms": ["src/ui/organisms"],
       "@templates": ["src/ui/templates"],
