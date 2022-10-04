@@ -7,10 +7,6 @@ const TOOLTIP_ARROW_SIZE = "8px";
 export type AlignVariants = "top" | "bottom" | "left" | "right";
 
 export const styles = StylesUtils.create({
-  container: {
-    display: "inline-block",
-    position: "relative",
-  },
   tooltip: {
     px: 3,
     py: 2,

@@ -1,6 +1,15 @@
 import { Theme } from "theme-ui";
 
 import palette from "./palette";
+import {
+  buttonVariants,
+  cardVariants,
+  formsVariants,
+  imageVariants,
+  layoutVariants,
+  linksVariants,
+  textVariants,
+} from "./variants";
 
 const makeTheme = <T extends Theme>(t: T) => t;
 
@@ -55,69 +64,13 @@ const theme = makeTheme({
       fontWeight: "body",
     },
   },
-  text: {
-    default: {
-      color: "text",
-      fontSize: 1,
-    },
-    newsCardTitle: {
-      fontSize: 2,
-      fontWeight: 600,
-    },
-    newsCardSubtitle: {
-      fontSize: 0,
-      fontFamily: "medium",
-    },
-    footerText: {
-      fontSize: 1,
-      fontFamily: "semiBold",
-    },
-  },
-  cards: {
-    primary: {
-      p: 2,
-      borderRadius: 3,
-    },
-    lastRegister: {
-      borderRadius: 3,
-      boxShadow: "0 0 8px rgba(0, 0, 0, .3)",
-      backgroundColor: "foreground",
-      height: 60,
-      width: 60,
-      backgroundPosition: "50% 20%",
-      cursor: "pointer",
-      "&:hover": {
-        backgroundColor: "primary",
-      },
-    },
-    news: {
-      p: 2,
-      bg: "foreground",
-      width: "50%",
-      borderRadius: 3,
-    },
-  },
-  buttons: {
-    primary: {
-      backgroundColor: "primary",
-      "&:hover": {
-        backgroundColor: "primaryLight",
-      },
-    },
-    secondary: {
-      backgroundColor: "white",
-      color: "primary",
-      "&:hover": {
-        backgroundColor: "primaryLight",
-        color: "white",
-      },
-    },
-  },
-  layout: {
-    container: {
-      px: [3, 5, 6],
-    },
-  },
+  text: textVariants,
+  cards: cardVariants,
+  buttons: buttonVariants,
+  images: imageVariants,
+  forms: formsVariants,
+  layout: layoutVariants,
+  links: linksVariants,
 });
 
 export default theme;

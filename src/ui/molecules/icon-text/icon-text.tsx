@@ -1,9 +1,9 @@
 import React from "react";
 import { Flex } from "theme-ui";
 
-import { Icon, IconProps, TextProps, Text } from "@atoms";
+import { Icon, IconProps, TextProps, Text, FlexProps } from "@atoms";
 
-export type IconTextProps = {
+export type IconTextProps = FlexProps & {
   text: string;
   iconName: IconProps["name"];
   textProps?: TextProps;

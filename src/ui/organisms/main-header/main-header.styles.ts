@@ -9,10 +9,6 @@ const styles = StylesUtils.create({
     position: "relative",
     overflow: "hidden",
   },
-  headerImage: {
-    zIndex: 2,
-    position: "absolute",
-  },
   blurBackground: {
     backdropFilter: "blur(0.5px)",
     position: "absolute",
@@ -27,9 +23,6 @@ const styles = StylesUtils.create({
     bg: "foreground",
     justifyContent: "space-between",
     flexDirection: ["column", "row"],
-  },
-  subHeaderContainer: {
-    bg: "foreground",
   },
 });
 

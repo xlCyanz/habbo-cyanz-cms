@@ -23,7 +23,6 @@ const InputWrapper = ({ renderLeft, renderRight, ...props }: InputProps) => {
       {renderLeft}
       <Input
         sx={{
-          ...styles.input,
           ...(renderLeft && { ml: 1 }),
           ...(renderRight && { mr: 1 }),
         }}

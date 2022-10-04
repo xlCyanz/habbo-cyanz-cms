@@ -15,12 +15,12 @@ const IconTextSocial = () => (
 );
 
 const DividerVertical = () => (
-  <Divider mx={[2, 3]} vertical sx={{ height: "20px" }} />
+  <Divider mx={[2, 3]} vertical sx={{ height: 0 }} />
 );
 
 const Footer = () => {
   return (
-    <Container as={Flex} py={3} sx={styles.footerContainer}>
+    <Container as={Flex} py={3} variant="footer">
       <Flex sx={styles.footerCopyright}>
         <Flex mr={1}>
           <TextIcon text="Copyright 2022" iconName="copyright" />

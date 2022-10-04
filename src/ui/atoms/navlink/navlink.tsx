@@ -2,8 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { NavLink, NavLinkProps as NavLinkPropsUI } from "theme-ui";
 
-import { StylesUtils } from "@utils";
-
 import Text from "../text";
 import { styles } from "./navlink.styles";
 
@@ -13,15 +11,10 @@ export type NavLinkProps = NavLinkPropsUI & {
   active?: boolean;
 };
 
-const NavLinkWrapper = ({ sx, title, active, ...props }: NavLinkProps) => {
+const NavLinkWrapper = ({ title, active, ...props }: NavLinkProps) => {
   return (
-    <NavLink as={Link} sx={StylesUtils.compose(styles.navlink, sx)} {...props}>
-      <Text
-        sx={StylesUtils.compose(
-          active ? styles.navLinkTextActive : {},
-          styles.navLinkText,
-        )}
-      >
+    <NavLink as={Link} {...props}>
+      <Text variant="navLinkText" sx={active ? styles.navLinkActive : {}}>
         {title}
       </Text>
     </NavLink>

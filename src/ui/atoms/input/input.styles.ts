@@ -11,10 +11,4 @@ export const styles = StylesUtils.create({
     borderWidth: 2,
     borderStyle: "solid",
   },
-  input: {
-    border: "none",
-    borderRadius: 0,
-    outline: 0,
-    fontFamily: "medium",
-  },
 });

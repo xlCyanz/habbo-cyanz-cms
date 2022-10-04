@@ -2,24 +2,25 @@ import { StylesUtils } from "@utils";
 
 export const styles = StylesUtils.create({
   navbar: {
-    py: 3,
-    alignItems: "center",
-    justifyContent: ["space-between", "center"],
+    py: 2,
+    justifyContent: ["space-between"],
   },
   navbarMobile: {
+    position: "absolute",
+    p: 3,
     flexDirection: "column",
     display: ["flex", "none"],
-    backgroundColor: "foreground",
-    py: 2,
+    borderRadius: 3,
+    backgroundColor: "highlight",
+    zIndex: 4,
+    mt: 1,
+    right: 2,
+    left: 2,
   },
   navbarMobileText: {
     fontSize: 2,
     mb: 2,
     fontWeight: 600,
-  },
-  navbarContainer: {
-    position: "relative",
-    backgroundColor: "foreground",
   },
   navLinkMobile: {
     py: 2,

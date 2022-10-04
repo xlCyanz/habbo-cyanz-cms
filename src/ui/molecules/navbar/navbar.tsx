@@ -17,7 +17,7 @@ const Navbar = ({ routes }: NavbarProps) => {
   const [showMenuMobile, setShowMenuMobile] = React.useState(false);
 
   return (
-    <Container sx={styles.navbarContainer}>
+    <Container variant="navbar">
       <Flex as="nav" sx={styles.navbar}>
         <MenuButton
           aria-label="Toggle Menu"
@@ -29,16 +29,18 @@ const Navbar = ({ routes }: NavbarProps) => {
           }}
         />
 
-        <Box sx={{ display: ["none", "flex"] }}>
-          {routes.map((route) => (
+        {routes.map((route) => (
+          <Box
+            key={`${route.name}-Desktop`}
+            sx={{ display: ["none", "block"] }}
+          >
             <NavLink
-              key={`${route.name}-Desktop`}
               active={window.location.pathname === route.path}
               title={route.name}
               to={route.path}
             />
-          ))}
-        </Box>
+          </Box>
+        ))}
       </Flex>
 
       {showMenuMobile && (

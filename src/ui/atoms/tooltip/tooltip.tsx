@@ -33,7 +33,7 @@ const TooltipWrapper = ({
 
   return (
     <Box
-      sx={styles.container}
+      sx={{ display: "inline-block", position: "relative" }}
       onMouseEnter={showTooltip}
       onMouseLeave={hideTooltip}
       {...props}

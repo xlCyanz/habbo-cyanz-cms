@@ -45,19 +45,17 @@ const MainHeader = () => {
           id="logo-habboi"
           src="https://i.imgur.com/2mQ5Cbe.png"
           alt="Habboi"
-          sx={styles.headerImage}
+          variant="header"
         />
         <Box sx={styles.blurBackground} />
       </Flex>
 
-      <Container sx={styles.subHeaderContainer}>
-        <Flex id="subNavbar" sx={styles.subHeader}>
-          <Flex>Radio</Flex>
-          <Flex sx={{ width: ["100%", "50%", "40%"], alignItems: "center" }}>
-            <Button>Iniciar Sesion</Button>
-            <Divider vertical mx={[2, 3, null, 4]} sx={{ height: "25px" }} />
-            <Button variant="secondary">Registrarse</Button>
-          </Flex>
+      <Container as={Flex} sx={styles.subHeader}>
+        <Flex>Radio</Flex>
+        <Flex sx={{ width: ["100%", "50%", "40%"], alignItems: "center" }}>
+          <Button>Iniciar Sesion</Button>
+          <Divider vertical mx={[2, 3, null, 4]} sx={{ height: "25px" }} />
+          <Button variant="secondary">Registrarse</Button>
         </Flex>
       </Container>
     </Box>
