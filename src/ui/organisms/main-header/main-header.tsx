@@ -36,8 +36,8 @@ const MainHeader = () => {
         sx={{
           backgroundImage: `url(${image})`,
           backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundPosition: "right",
+          backgroundSize: "200%",
+          backgroundPosition: "center",
           ...styles.headerBoxImage,
         }}
       >
