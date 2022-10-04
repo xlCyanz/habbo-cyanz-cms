@@ -3,6 +3,8 @@ import { Route, BrowserRouter, Routes as ReactRoutes } from "react-router-dom";
 
 import { Routes } from "@core";
 import { useAuth } from "@hooks";
+import { withLayout } from "@hocs";
+import { MainLayout } from "@templates";
 import { ProtectedRoute } from "@atoms";
 import {
   DevPage,
@@ -11,9 +13,6 @@ import {
   NotFoundPage,
   RegisterPage,
 } from "@pages";
-
-import { withLayout } from "@hocs";
-import { MainLayout } from "@templates";
 
 const RootNavigation = () => {
   const { auth } = useAuth();
