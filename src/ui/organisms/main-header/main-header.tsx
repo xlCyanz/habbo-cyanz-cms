@@ -4,8 +4,7 @@ import { Box, Button, Container, Divider, Flex, Image } from "@atoms";
 
 import styles from "./main-header.styles";
 
-const image =
-  "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4d8ccfa9-0c40-488c-8689-f397b4fbdb19/dcu3xrc-4a5c4133-41a9-4f4b-96a2-5070b4270b9e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzRkOGNjZmE5LTBjNDAtNDg4Yy04Njg5LWYzOTdiNGZiZGIxOVwvZGN1M3hyYy00YTVjNDEzMy00MWE5LTRmNGItOTZhMi01MDcwYjQyNzBiOWUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.lzxOE0J8_F4EGKmdSdSI-w0MXxpxBIUeZdOzkP83ZBM";
+const image = "https://beeimg.com/images/a89729143661.png";
 
 const MainHeader = () => {
   return (
@@ -14,7 +13,7 @@ const MainHeader = () => {
         sx={{
           backgroundImage: `url(${image})`,
           backgroundRepeat: "no-repeat",
-          backgroundSize: "200%",
+          backgroundSize: "150%",
           backgroundPosition: "center",
           ...styles.headerBoxImage,
         }}
