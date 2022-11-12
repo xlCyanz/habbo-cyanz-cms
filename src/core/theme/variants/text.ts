@@ -11,6 +11,10 @@ export default {
     ...defaultStyle,
     fontSize: 2,
     fontWeight: 600,
+    display: "block",
+    whiteSpace: "nowrap",
+    overflow: "hidden",
+    textOverflow: "ellipsis",
   },
   newsCardSubtitle: {
     ...defaultStyle,
@@ -25,5 +29,9 @@ export default {
   navLinkText: {
     ...defaultStyle,
     fontSize: 2,
+  },
+  newsTitle: {
+    fontSize: 2,
+    fontFamily: "semiBold",
   },
 } as Record<string, ThemeUIStyleObject>;

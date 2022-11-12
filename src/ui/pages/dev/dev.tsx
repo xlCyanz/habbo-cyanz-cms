@@ -50,7 +50,7 @@ const DevPage = () => {
       <LastRegisterCard avatar={avatarHabbo} username="xlCyanz" />
       <Box my={3}>
         <NewsCard
-          title="Lorem Ipsum"
+          title="Lorem ipsum dolor sit amet consectetur adipisicing elit."
           image="https://images.habbo.com/web_images/habbo-web-articles/lpromo_Room_wired.png"
           author="xlCyanz"
         />
