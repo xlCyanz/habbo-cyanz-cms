@@ -45,3 +45,6 @@ export type { NavLinkProps } from "./navlink";
 
 export { default as MenuButton } from "./menu-button";
 export type { MenuButtonProps } from "./menu-button";
+
+export { default as Grid } from "./grid";
+export type { GridProps } from "./grid";
